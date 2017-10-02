@@ -1,0 +1,26 @@
+// Old Version Info of Gate Opener Prior to Git
+
+struct Version_struct Version_info[] =
+{
+  {"1.0", "2015-04-07", "ljbelenky@gmail.com", "Initial Release"},
+  {"1.5", "2015-04-26", "ljbelenky@gmail.com", "Added RF24 Remote"},
+  {"1.6", "2015-11-05", "ljbelenky@gmail.com", "Added exteriorLight, Open-Close and ApproachSwitch"},
+  {"1.7", "2015-12-06", "ljbelenky@gmail.com", "Added Open_Dir and Close_Dir"},
+  {"1.8", "2015-12-07", "ljbelenky@gmail.com", "Added retry after eye is triggered"},
+  {"1.9", "2016-04-28", "ljbelenky@gmail.com", "Remove ApproachSwitch"},
+  {"2.0", "2016-04-28", "ljbelenky@gmail.com", "Convert to Interrupt Based Architecture"},
+  {"2.1", "2016-04-29", "ljbelenky@gmail.com", "Added interior light control"},
+  {"2.2", "2016-10-02", "ljbelenky@gmail.com", "Added fine-adjustment after motion completes"},
+  {"2.3", "2016-11-19", "ljbelenky@gmail.com", "Added speed-reducing gears"},
+  {"2.4", "2016-11-21", "ljbelenky@gmail.com", "Added Toggle-switch function on pin 18, interrupt 5"},
+  {"2.5", "2016-12-05", "ljbelenky@gmail.com", "Added radio control of lights"},
+  {"2.6", "2016-12-08", "ljbelenky@gmail.com", "Added furnace control"}
+};
+struct Version_struct Current_version;
+
+
+Current_version = Version_info[ARRAY_SIZE(Version_info) - 1];
+Serial.println(Current_version.version_num);
+Serial.println(Current_version.date);
+Serial.println(Current_version.author);
+Serial.println(Current_version.comment);
