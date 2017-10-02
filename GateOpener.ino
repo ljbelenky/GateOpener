@@ -1,3 +1,4 @@
+/ Master Branch
 #include "RF24.h"
 #include <SPI.h>
 #define ARRAY_SIZE(a)  (sizeof(a) / sizeof(*(a)))
@@ -304,11 +305,11 @@ void SendPulse(float step_delay) {
 void Move_Gate(int active_switch, struct FineTune_Struct FineTune) {
   ExteriorLight = StartLightTimer(ExteriorLight);
   InteriorLight = StartLightTimer(InteriorLight);
-  
-  
-  
-  
-  
+
+
+
+
+
   digitalWrite(Enable_Motor, HIGH);                                                                //Enable Motor
   long  step_count = GateSteps;
   termination = Null;
